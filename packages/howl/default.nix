@@ -1,23 +1,24 @@
 {
   lib,
   stdenv,
-  fetchFromCodeberg,
+  fetchFromSourcehut,
   pkg-config,
   neuswc,
   wayland,
   pixman,
   libxkbcommon,
   libinput,
+  libspng,
 }:
 stdenv.mkDerivation {
   pname = "howl";
   version = "0.1.0";
-  src = fetchFromCodeberg {
-    domain = "codeberg.org";
-    owner = "wf";
+  src = fetchFromSourcehut {
+    domain = "sr.ht";
+    owner = "~wf";
     repo = "howl";
-    rev = "b47b8ea4ea";
-    hash = "sha256-F47JFIR1myzlu8UxZyZUx+PLUGYirQM1KfxiALCf13Y=";
+    rev = "597db23";
+    hash = "sha256-7Gx9ahoXv/tRjaz8cZVC7dF851D7CF4spnFkBDOtPOM=";
   };
 
   nativeBuildInputs = [
@@ -29,6 +30,7 @@ stdenv.mkDerivation {
     pixman
     libxkbcommon
     libinput
+    libspng
   ];
 
   preBuild = ''
