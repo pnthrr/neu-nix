@@ -4,12 +4,8 @@
   stdenv,
   pixman,
   wayland,
+  wayland-scanner,
   pkg-config,
-  udev,
-  libinput,
-  libxcb,
-  libxcb-wm,
-  libxkbcommon,
   libdrm,
   neuwld,
   neuswc,
@@ -22,30 +18,28 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~dlm";
     repo = "mojito";
-    rev = "0b4307cb252b55e7f423c10882e6f5eba855d083";
-    hash = "sha256-FQGjB4u1XIsbErcO2RlR6IU10wi6tlRecjS56gERWjs=";
+    rev = "713662f2f7620a74df59bdfa17a1d8d4715b9562";
+    hash = "sha256-OYVRc0rh+yoIXNo3kLt+G8ulvxx8W8foOUn+YdAou6U=";
   };
 
   nativeBuildInputs = [
     pkg-config
+    wayland-scanner
   ];
 
   buildInputs = [
     pixman
     wayland
-    udev
-    libinput
-    libxcb
-    libxcb-wm
-    libxkbcommon
     libdrm
     neuwld
     neuswc
     fontconfig
+    wayland
   ];
 
   makeFlags = [
     "PREFIX=$(out)"
+    "DESTDIR=$(out)"
   ];
 
   meta = {
