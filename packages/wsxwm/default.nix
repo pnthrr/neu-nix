@@ -21,8 +21,8 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~uint";
     repo = "wsxwm";
-    rev = "f5f3c1f53b77d41ab0b0aefabb64e86881b5705d";
-    hash = "sha256-xXyRdFU/HYgbs9drGnqAh4mz4BgtcYfc6VJX8SvXFD4=";
+    rev = "f6a22e6d3c083cca5193e3f86154e2d654528ade";
+    hash = "sha256-5ht8gt3hHq3CHQSNSBCm4TcNtDuFmajLvDnPUJGRJMk=";
   };
 
   nativeBuildInputs = [
