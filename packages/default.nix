@@ -37,6 +37,7 @@ let
     swiv = self.callPackage ./swiv { };
     mojito = self.callPackage ./mojito { };
     hst = self.callPackage ./hst { };
+    wawa = self.callPackage ./wawa { };
   });
 in
 {
@@ -58,5 +59,6 @@ in
     howl
     slgro
     klatka
+    wawa
     ;
 }
