@@ -28,8 +28,8 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~shrub900";
     repo = "neuswc";
-    rev = "c671c493c139fc263e55c70806cba7c164a73b77";
-    hash = "sha256-NzpmATI5l2e74IObN0YWl10OwBFpw1sob/6Y362161U=";
+    rev = "975ad56221d4545bdd44d14fdd4cac796de207d9";
+    hash = "sha256-2C0WsK/Rg5YS7bFzKQzFHn1h8SlWKnHbSak3THWzxbs=";
   };
 
   nativeBuildInputs = [
