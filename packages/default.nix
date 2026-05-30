@@ -37,6 +37,7 @@ let
     mojito = self.callPackage ./mojito { };
     hst = self.callPackage ./hst { };
     wawa = self.callPackage ./wawa { };
+    neuipc = self.callPackage ./neuipc { };
   });
 in
 {
@@ -58,5 +59,6 @@ in
     slgro
     klatka
     wawa
+    neuipc
     ;
 }
