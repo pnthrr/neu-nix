@@ -20,6 +20,10 @@
   fetchFromSourcehut,
   patches ? [ ],
   xwaylandSupport ? true,
+  extra ? true,
+  example ? false,
+  evdev-keyboard ? "/dev/input/event0",
+  evdev-pointer ? "/dev/input/event1",
 }:
 stdenv.mkDerivation {
   pname = "neuswc";
@@ -58,6 +62,13 @@ stdenv.mkDerivation {
   ];
 
   mesonAutoFeatures = "auto";
+
+  mesonFlags = [
+    "-Dextra=${lib.boolToString extra}"
+    "-Dexample=${lib.boolToString example}"
+    "-Devdev-keyboard=${evdev-keyboard}"
+    "-Devdev-pointer=${evdev-pointer}"
+  ];
 
   inherit patches;
 
